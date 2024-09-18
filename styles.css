@@ -1,0 +1,133 @@
+body {
+    font-family: 'Noto Sans Rounded', sans-serif;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+.split-background {
+    height: 100vh; 
+    width: 100vw;
+    background: linear-gradient(to bottom, #ffffff 50%, #007bff 50%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, rgb(236, 236, 236), rgba(255, 255, 255, 0.737));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(97, 97, 97, 0.219);
+}
+
+.text {
+    font-size: 2.3rem;
+    font-family: 'Noto Sans Rounded', sans-serif;
+}
+
+.span2 {
+    color: #007bff;
+}
+
+.buttondown {
+    font-size: 16px;
+    padding: 15px 20px;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    background-color: #4ca2ff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border-width: 0;
+    margin-top: 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, #2882ff 50%, #3b78e8 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.5s ease;
+    border: #bad6ff5b solid 2px;
+}
+
+.buttondown i {
+    margin-right: 5px;
+}
+
+.buttondown:hover {
+    background-position: left bottom;
+}
+
+.buttondown2 {
+    font-size: 16px;
+    padding: 15px 30px;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    background-color: #4ca2ff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border-width: 0;
+    margin-top: 10px;
+    cursor: pointer;
+    background: linear-gradient(to right, #272727 50%, #343434 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.5s ease;
+    border: #a5a5a55b solid 2px;
+}
+
+.buttondown2 i {
+    margin-right: 10px;
+}
+
+.buttondown:hover {
+    background-position: left bottom;
+}
+
+.buttondown2:hover {
+    background-position: left bottom;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 70%;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+.message i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.message span {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+  }
