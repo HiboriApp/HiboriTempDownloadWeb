@@ -182,24 +182,27 @@ a {
     width: 100%;
     top: 50%;
     left: 50%;
-    translate: -50% -50%;
+    transform: translate(-50%, -50%);
     background: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
-    z-index: -1;
     padding: 3px;
     border-radius: 20px;
     animation: 3s spin linear infinite;
+    pointer-events: none; /* Ensure these don't interfere with hover */
+    z-index: -1;
 }
 
 .type1::before {
     filter: blur(1.5rem);
-    opacity: 0.5;    
+    opacity: 1;
 }
 
 .type1:hover {
     cursor: pointer;
-    transform: translateY(-5px) scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
 }
+
+
 
 .imgdisc {
     display: flex;
@@ -213,7 +216,6 @@ a {
     object-fit: contain;
 }
 
-
 @keyframes spin {
     from {
         --angle: 0deg;
@@ -222,6 +224,7 @@ a {
         --angle: 360deg;
     }
 }
+
 
 
   @media only screen and (max-width: 600px) {
