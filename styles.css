@@ -140,10 +140,93 @@ a {
     margin: 0;
     font: inherit;
   }
+  .informed {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.info {
+    position: absolute;
+    display: flex;
+    font-size: 20px; 
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.type1 {
+    position: relative;
+    background-color: #272727;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.type1::after, .type1::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    z-index: -1;
+    padding: 3px;
+    border-radius: 20px;
+    animation: 3s spin linear infinite;
+}
+
+.type1::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;    
+}
+
+.type1:hover {
+    cursor: pointer;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.imgdisc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgdisc img {
+    height: 60%;
+    width: 60%;
+    object-fit: contain;
+}
+
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
 
   @media only screen and (max-width: 600px) {
     .container {
-        width: 90%;
+            width: 90%;
         height: 300px;
     }
     .text {
