@@ -163,50 +163,50 @@ a {
     inherits: false;
 }
 
-.type1 {
-    position: relative;
-    background-color: #272727;
-    height: 10vh;
-    width: 10vh;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.type1::after, .type1::before {
-    content: '';
-    position: absolute;
-    height: 100%; /* Slightly increase size to ensure visibility */
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: conic-gradient(from var(--angle, 0deg), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
-    padding: 3px; 
-    border-radius: 20px; 
-    animation: spin 3s linear infinite;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.type1::before {
-    filter: blur(1rem); 
-    opacity: 0.8; 
-}
-
-.type1:hover {
-    cursor: pointer;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Animation keyframes for spinning */
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
+    .type1 {
+        position: relative;
+        background-color: #272727;
+        height: 10vh;
+        width: 10vh;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-}
+
+    .type1::after, .type1::before {
+        content: '';
+        position: absolute;
+        height: 100%; /* Slightly increase size to ensure visibility */
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: conic-gradient(from var(--angle, 0deg), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+        padding: 3px; 
+        border-radius: 20px; 
+        animation: spin 3s linear infinite;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    .type1::before {
+        filter: blur(1rem); 
+        opacity: 0.8; 
+    }
+
+    .type1:hover {
+        cursor: pointer;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Animation keyframes for spinning */
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
 
 
 
